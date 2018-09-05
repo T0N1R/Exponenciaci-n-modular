@@ -20,6 +20,7 @@ def main():
         print " "
 
 
+#Ingreso de valores
 def solicitud():
     print("Calcule b^e mod m")
     print "----------------------"
@@ -33,10 +34,13 @@ def solicitud():
     
 
 def calcular(b,e,m):
+#convertir e en binario
     binario = bin(e)
     binario = binario[2:]
     print e, "en binario: ", binario
     aumento = 0
+
+    #limite, hasta que b^limite se llega
     limite = len(binario)
 
     opciones = []
@@ -44,7 +48,7 @@ def calcular(b,e,m):
     multiplicar = 1
 
     contador = 0
-    
+
     for i in binario:
         if (aumento == 0):
             aumento = b
@@ -64,10 +68,8 @@ def calcular(b,e,m):
 
     opciones.reverse()
 
-    #print opciones
 
     while (contador<limite):
-        #print binario[contador]
         if (binario[contador] == "1"):
             multiplicar = multiplicar * opciones[contador]
         contador = contador +1
