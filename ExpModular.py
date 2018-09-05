@@ -40,7 +40,7 @@ def calcular(b,e,m):
     print e, "en binario: ", binario
     aumento = 0
 
-    #limite, hasta que b^limite se llega
+    #limite, hasta que b^limite se puede llegar
     limite = len(binario)
 
     opciones = []
